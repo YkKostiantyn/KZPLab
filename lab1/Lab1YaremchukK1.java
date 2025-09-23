@@ -34,7 +34,7 @@ public class Lab1YaremchukK1 {
      * @return size of matrix n
      */
     public static int readMatrixSize(Scanner sc) {
-        System.out.print("Введіть розмір квадратної матриці: ");
+        System.out.print("Enter size of matrix: ");
         int n = sc.nextInt();
         sc.nextLine();
         return n;
@@ -48,11 +48,11 @@ public class Lab1YaremchukK1 {
      * @return symbol that fills
      */
     public static char readFillerChar(Scanner sc) {
-        System.out.print("Введіть один символ-заповнювач: ");
+        System.out.print("Enter one placeholder character: ");
         String input = sc.nextLine();
 
         if (input.length() != 1) {
-            System.out.println("Помилка: потрібно ввести лише один символ!");
+            System.out.println("Error: Only one character needs to be entered!");
             System.exit(1);
         }
 
@@ -72,12 +72,14 @@ public class Lab1YaremchukK1 {
         for (int i = 0; i < n; i++) {
             arr[i] = new char[n + i];
             for (int j = 0; j < n; j++) {
+                arr[i][j] = (j >= n - 1 - i) ? filler : ' ';
+                /* 
                 if(j >=n - 1 - i){
-                    arr[i][j] = filler;
-                }
-                else {
+                        arr[i][j] = filler;
+                } else {
                     arr[i][j] = ' ';
                 }
+                */
             }
         }
 
@@ -90,7 +92,7 @@ public class Lab1YaremchukK1 {
      * @param arr 
      */
     public static void printArray(char[][] arr) {
-        System.out.println("Зубчастий масив:");
+        System.out.println("Jagged Array:");
         for (char[] row : arr) {
             for (char c : row) {
                 System.out.print(c + " ");
@@ -113,9 +115,9 @@ public class Lab1YaremchukK1 {
                 }
                 writer.write("\n");
             }
-            System.out.println("Масив записано у файл " + filename);
+            System.out.println("The array is written to a file " + filename);
         } catch (IOException e) {
-            System.out.println("Помилка запису у файл: " + e.getMessage());
+            System.out.println("Error writing to file: " + e.getMessage());
         }
     }
 }
