@@ -68,7 +68,7 @@ public class Locomotive {
     }
 
     public void refuel(int liters) throws IOException {
-        log("powered " + liters + " ");
+        log("Powered " + liters + " ");
     }
 
     public int getWagons() {
@@ -80,7 +80,7 @@ public class Locomotive {
     }
 
     public void close() throws IOException {
-        log("Роботу локомотива завершено\n");
+        log("The locomotive's work is complete\n");
         if (logger != null) {
             logger.close();
         }
