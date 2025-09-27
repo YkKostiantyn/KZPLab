@@ -13,7 +13,7 @@ public class Main {
             loco.removeWagon();
 
             System.out.println("Driver: " + loco.getDriverName());
-            System.out.println("number of wagons: " + loco.getWagons());
+            System.out.println("Number of wagons: " + loco.getWagons());
 
             loco.changeDriver("Patrick Udes");
             loco.checkEngineStatus();
