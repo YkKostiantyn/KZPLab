@@ -39,4 +39,8 @@ public class Set<T extends Comparable<T>> {
 
         }
     }
+
+    public int size(){
+        return elements.size();
+    }
 }

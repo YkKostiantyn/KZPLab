@@ -18,9 +18,30 @@ public class Main {
         bookSet.add(new Book("Java for beginner", 300));
         bookSet.add(new Book("algorithms", 500));
         bookSet.add(new Book("math", 250));
+        bookSet.add(new Book("math", 250));
+        bookSet.add(new Book("math", 250));
+        bookSet.add(new Book("math", 250));
 
         System.out.println("\nBook:");
         bookSet.printAll();
         System.out.println("The book with the fewest pages: " + bookSet.findMin());
+
+        int countBook = bookSet.size();
+        int countStudent = studentSet.size();
+
+        if(countStudent > countBook){
+            System.out.println("Student:" + countStudent);
+            studentSet.printAll();
+        }
+        else if(countBook > countStudent){
+            System.out.println("Book:" + countBook);
+            bookSet.printAll();
+        }
+        else{
+            System.out.println("Student:" + countStudent);
+            studentSet.printAll();
+            System.out.println("Book:" + countBook);
+            bookSet.printAll();
+        }
     }
 }
